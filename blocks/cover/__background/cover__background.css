@@ -1,0 +1,51 @@
+.cover__background {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	min-height: 740px;
+	color: #fff;
+	text-decoration: none;
+	box-sizing: border-box;
+	background-image: url(../../../images/cover-trains.jpg);
+	background-position: center;
+	background-size: cover;
+	padding: 20px;
+	z-index: 1;
+}
+
+.cover__background::before {
+	position: absolute;
+	content: "";
+	background: #2A2C2F;
+	opacity: .3;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transition: opacity 0.5s ease-in-out;
+	z-index: -1;
+}
+
+.cover__background:hover::before {
+	opacity: .8;
+}
+
+@media screen and (max-width: 1279px) {
+	.cover__background {
+		min-height: 640px;
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	.cover__background {
+		min-height: 480px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.cover__background {
+		min-height: 200px;
+	}
+}
